@@ -29,6 +29,8 @@ export class UserProfile extends AutomapperProfile {
           mapFrom((s) => `${s.firstName} ${s.lastName}`),
         ),
       );
+
+      createMap(mapper, UserDto, User);
     };
   }
 }

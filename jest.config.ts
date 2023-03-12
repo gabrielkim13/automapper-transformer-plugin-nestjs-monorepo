@@ -17,14 +17,7 @@ export default {
       'ts-jest',
       {
         astTransformers: {
-          before: [
-            {
-              path: '@automapper/classes/transformer-plugin',
-              options: {
-                modelFileNameSuffix: ['.dto.ts', '.entity.ts'],
-              },
-            },
-          ],
+          before: ['<rootDir>/automapper.plugin.ts'],
         },
       },
     ],

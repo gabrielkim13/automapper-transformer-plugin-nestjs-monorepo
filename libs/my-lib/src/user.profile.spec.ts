@@ -27,9 +27,9 @@ describe('UserProfile', () => {
     const dto = mapper.map(entity, User, UserDto);
 
     expect(dto).toBeInstanceOf(UserDto);
-    expect(dto.firstName).toBeInstanceOf('Gabriel');
-    expect(dto.lastName).toBeInstanceOf('Kim');
-    expect(dto.fullName).toBeInstanceOf('Gabriel Kim');
+    expect(dto.firstName).toBe('Gabriel');
+    expect(dto.lastName).toBe('Kim');
+    expect(dto.fullName).toBe('Gabriel Kim');
   });
 
   test('map dto to entity', () => {
@@ -42,7 +42,7 @@ describe('UserProfile', () => {
     const entity = mapper.map(dto, UserDto, User);
 
     expect(entity).toBeInstanceOf(User);
-    expect(entity.firstName).toBeInstanceOf('Gabriel');
-    expect(entity.lastName).toBeInstanceOf('Kim');
+    expect(entity.firstName).toBe('Gabriel');
+    expect(entity.lastName).toBe('Kim');
   });
 });
